@@ -1,0 +1,7 @@
+spring:
+  redis:
+      port: 6379
+      password: xofcO46Fy
+      host: 10.17.153.104
+server:
+  port: 9090
