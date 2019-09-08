@@ -1,0 +1,6 @@
+server:
+        port: 8001
+        servlet:
+            context-path: /feigncomsumer
+        tomcat:
+            uri-encoding: UTF-8

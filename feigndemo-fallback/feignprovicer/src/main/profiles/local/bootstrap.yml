@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: feignprovider
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://10.17.154.201:8761/eureka/,http://10.17.154.202:8761/eureka/,http://10.17.154.203:8761/eureka

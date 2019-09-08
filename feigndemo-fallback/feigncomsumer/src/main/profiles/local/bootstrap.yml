@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: feigncomsumer
+  main:
+    allow-bean-definition-overriding: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://10.17.154.201:8761/eureka/,http://10.17.154.202:8761/eureka/,http://10.17.154.203:8761/eureka
+feign:
+  name: MFRAMEWORK-PROVIDER
+  provider: feignprovider
+##开启Hystrix断路器
+  hystrix:
+    enabled: true
+
+ribbon:
+  ConnectTimeout: 20000  #毫秒    连接超时时间
+  ReadTimeout: 20000     #毫秒      逻辑处理超时时间
+  OkToRetryOnAllOperations: true    # 是否对所有操作都进行重试
+  MaxAutoRetries: 2     # 对当前实例的最大重试次数(请求服务超时6s则会再请求一次)
+  MaxAutoRetriesNextServer: 1     # 切换实例的最大重试次数(如果还失败就切换下
