@@ -17,6 +17,7 @@ feign:
   hystrix:
     enabled: true
 
+##Ribbon超时重试配置
 ribbon:
   ConnectTimeout: 20000  #毫秒    连接超时时间
   ReadTimeout: 20000     #毫秒      逻辑处理超时时间
