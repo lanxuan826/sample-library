@@ -1,0 +1,22 @@
+spring:
+#  datasource:
+#    platform: mysql
+##    url: jdbc:mysql://localhost:3306/demo?characterEncoding=utf8
+#    username: root
+#    password: root
+#    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+# Mybatis 配置
+mybatis:
+  typeAliasesPackage: com.xiaoqiang.shardingjdbc.domain
+  mapperLocations: classpath:mapper/*.xml
+  configuration.map-underscore-to-camel-case: true
+
+# 打印mybatis中的sql语句和结果集
+logging:
+  level.com.company.shardingjdbc.mapper: TRACE
