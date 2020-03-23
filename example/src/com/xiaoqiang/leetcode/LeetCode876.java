@@ -1,8 +1,5 @@
 package com.xiaoqiang.leetcode;
 
-import jdk.nashorn.internal.objects.annotations.Where;
-
-import java.util.List;
 
 /**
  * 876. 链表的中间结点
