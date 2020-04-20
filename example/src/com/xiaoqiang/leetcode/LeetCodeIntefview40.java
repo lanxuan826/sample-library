@@ -97,4 +97,21 @@ public class LeetCodeIntefview40 {
 
 
     }
+
+
+
+
+    int[] bucketSort(int[] nums){
+        int[] bk = new int[50000 * 2 + 1];
+        for(int i = 0; i < nums.length; i++){
+            bk[nums[i] + 50000] += 1;
+        }
+        int ar = 0;
+        for(int i = 0; i < bk.length; i++) {
+            for (int j = bk[i]; j > 0; j--) {
+                nums[ar++] = i - 50000;
+            }
+        }
+        return nums;
+    }
 }
