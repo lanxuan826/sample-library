@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: springboot-eureka-server-demo
+server:
+  port: 8761
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: false
+    fetch-registry: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+  server:
+    port: 8762
+    servlet:
+      context-path: /
+    ssl:
+      enabled: false
