@@ -1,0 +1,29 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: springboot-eureka-client-demo
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  server:
+    port: 10111
+    servlet:
+      context-path: /
+    ssl:
+      enabled: false
+  endpoint:
+      health:
+        show-details: always
+eureka:
+  instance:
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+  client:
+    service-url:
+#      defaultZone: ${EUREKA_SERVICE_URL:http://10.17.154.201:8761}/eureka/
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
