@@ -21,8 +21,8 @@
     <repositories>
     <repository>
         <id>public</id>
-        <name>Midea Repository</name>
-        <url>http://mvn.midea.com/nexus/content/repositories/public</url>
+        <name>aliyun Repository</name>
+        <url>https://maven.aliyun.com/repository</url>
         <releases>
             <enabled>true</enabled>
         </releases>
