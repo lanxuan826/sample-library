@@ -1,8 +1,8 @@
 spring:
   redis:
-    host: 10.17.156.10
+    host: xx.xx.xxx.x
     port: 6379
-    password: k0Rquy6Sc
+    password: xxxx
     database: 0           #Redis默认情况下有16个分片，这里配置具体使用的分片，默认是0
     timeout: 5000         #连接超时时间(ms)
     lettuce:
